@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Player Video Player</title>
+
+</head>
+<body>
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+        <video id='video-id' controls style="width: 640px; height: 360px;">
+            <source src='https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4' title='1080p' type='video/mp4' />
+            <source src='https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4' title='720p' type='video/mp4' />
+            <source src='https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4' title='480p' type='video/mp4' />
+        </video>
+    <script>
+        var myFP = fluidPlayer(
+            'video-id',	{
+        "layoutControls": {
+            "controlBar": {
+                "autoHideTimeout": 3,
+                "animated": true,
+                "autoHide": true
+            },
+            "htmlOnPauseBlock": {
+                "html": null,
+                "height": null,
+                "width": null
+            },
+            "autoPlay": true,
+            "mute": true,
+            "allowTheatre": true,
+            "playPauseAnimation": true,
+            "playbackRateEnabled": true,
+            "allowDownload": true,
+            "playButtonShowing": true,
+            "fillToContainer": false,
+            "posterImage": ""
+        },
+        "vastOptions": {
+            "adList": [],
+            "adCTAText": false,
+            "adCTATextPosition": ""
+        }
+    })
+    </script>
+
+</body>
+</html>
